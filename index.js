@@ -6,7 +6,7 @@ const server = express();
 server.use(express());
 
 server.get('/', (req, res) => {
-    const songs = [{id: 1, name: 'Final Countdown'}];
+    const songs = [{id: 1, name: 'Final Countdown', port: process.env.PORT}];
     res.status(200).json(songs);
 })
 
